@@ -26,3 +26,20 @@ const throwError = (message: string): void => {
         throw new Error(message);
     }
 }; // because we're not returning anything and there's a chance of us never reaching the end of the function
+
+const todaysWeather = {
+    date: new Date(),
+    weather: 'sunny'
+};
+const logWeather = ({
+    date,
+    weather
+}: {
+    date: Date;
+    weather: string;
+}): void => {
+    console.log(date);
+    console.log(weather);
+};
+
+logWeather(todaysWeather);
