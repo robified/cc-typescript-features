@@ -21,3 +21,9 @@ carMakers.map((car: string): string => {
     // we get access to a lot of auto complete methods from strings
     return car.toUpperCase();
 });
+
+// Flexible types
+const importantDates: (Date | string)[] = [new Date()];
+importantDates.push('2030-10-10');
+importantDates.push(new Date());
+importantDates.push(100); // this won't work
