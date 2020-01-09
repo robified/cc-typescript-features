@@ -39,3 +39,14 @@ const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates); // {x: 10, y: 20};
 // coordinates.rawr // TS will show you a property error
+
+// 2) When we declare a variable on one line and initialize it later
+let words = ['red', 'green', 'blue'];
+// to make the warning go away, you have to add a type annotation
+let foundWord: boolean; //let foundWord: false; // this also works too
+
+for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'green') {
+        foundWord = true;
+    }
+}
