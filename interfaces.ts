@@ -1,8 +1,5 @@
 // a variable that refers to a type
-interface Vehicle {
-    name: string;
-    year: Date;
-    broken: boolean;
+interface Reportable {
     summary(): string;
 }
 
@@ -16,11 +13,8 @@ const oldCivic = {
 };
 
 // to call this function, you must provide an object that has certain properties
-const printVehicle = (vehicle: Vehicle): void => {
-    console.log(`Name: ${vehicle.name}`);
-    console.log(`Year: ${vehicle.year}`);
-    console.log(`Broken: ${vehicle.broken}`);
-    console.log(vehicle.summary());
+const printSummary = (item: Reportable): void => {
+    console.log(item.summary());
 };
 
-printVehicle(oldCivic);
+printSummary(oldCivic);
