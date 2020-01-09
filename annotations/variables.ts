@@ -29,6 +29,7 @@ let point: { x: number; y: number } = {
 };
 
 // Function
+// this is the annotation for the variable
 const logNumber: (i: number) => void = (i: number) => {
     console.log(i);
 };
