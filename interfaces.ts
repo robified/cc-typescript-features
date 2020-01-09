@@ -12,9 +12,19 @@ const oldCivic = {
     }
 };
 
+const drink = {
+    color: 'brown',
+    carbonated: true,
+    sugar: 40,
+    summary(): string {
+        return `My drink has ${this.sugar} grams of sugar.`;
+    }
+};
+
 // to call this function, you must provide an object that has certain properties
 const printSummary = (item: Reportable): void => {
     console.log(item.summary());
 };
 
 printSummary(oldCivic);
+printSummary(drink);
