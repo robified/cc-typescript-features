@@ -1,14 +1,18 @@
+// a variable that refers to a type
+interface Vehicle {
+    name: string;
+    year: number;
+    broken: boolean;
+}
+
 const oldCivic = {
     name: 'civic',
     year: 2000,
     broken: true
 };
 
-const printVehicle = (vehicle: {
-    name: string;
-    year: number;
-    broken: boolean;
-}): void => {
+// to call this function, you must provide an object that has certain properties
+const printVehicle = (vehicle: Vehicle): void => {
     console.log(`Name: ${vehicle.name}`);
     console.log(`Year: ${vehicle.year}`);
     console.log(`Broken: ${vehicle.broken}`);
